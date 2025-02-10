@@ -30,7 +30,6 @@ echo "$DOCS"
 echo "$DOCS" | while read -r ID NAME; 
 do
   FILE_NAME="${NAME//[ \/]/_}.pdf"
-  echo "Kohsey $FILE_NAME"
 
   curl -L -H "Authorization: Bearer $SESSION_ID" \
     "https://v2-app.edocperso.fr/edocPerso/V1/edpDoc/getDocContent?sessionId=$SESSION_ID&documentId=$ID" \
